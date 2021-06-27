@@ -1,0 +1,150 @@
+/* body::before {
+    content: "";
+    margin: 0;
+    position: absolute;
+    background-image: url("https://www.projectengineer.net/wp-content/uploads/2019/12/project-presentation-2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #7474bc;
+    background-blend-mode: multiply;
+    filter: blur(2px);
+    z-index: -1;
+} */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+}
+
+span {
+    font-size: small;
+    font-weight: lighter;
+}
+
+/* */
+#bg-image {
+    background-image: url("https://www.projectengineer.net/wp-content/uploads/2019/12/project-presentation-2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #7474bc;
+    background-blend-mode: multiply;
+    position: fixed; /***/
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+}
+
+#bg-image::after {
+    content: "";
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    backdrop-filter: blur(5px);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+#description {
+    font-style: italic;
+}
+
+form {
+    width: 50%;
+    max-width: 800px;
+    padding: 2em;
+    background-color: rgba(0, 0, 0, 0.60);
+    border-radius: 5px;
+}
+
+@media (min-width: 1000px) {
+    form {
+        width: 75%;
+    }
+}
+
+@media (max-width: 600px) {
+    form {
+        width: 80%;
+    }
+}
+
+@media (max-width: 500px) {
+    form {
+        width: 95%;
+    }
+}
+
+label,div p {
+    display: block;
+    margin-bottom: 7px;
+}
+
+form div {
+    padding: 0%;
+    margin: 20px 0px;
+}
+
+input,textarea,select {
+    font-size: medium;
+    outline: none;
+    border-color: transparent;
+    border-style: outset;
+}
+input::placeholder,
+textarea::placeholder,
+select::placeholder {
+    font-size: large;
+}
+
+input:focus,input:active,
+textarea:focus,textarea:active,
+select:focus,select:active {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-left-color: hsl(240, 100%, 70%);
+    border-left-width: 2px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    transform: scale(1.5);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+    width: 100%;
+    height: 2.1rem;
+    border-radius: 3px;
+    padding-left: 10px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 6rem;
+    resize: vertical;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    height: 2.5rem;
+    border-width: 0;
+    cursor: pointer;
+    color: white;
+    font-weight: normal;
+    background-color: #37af65;
+}

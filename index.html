@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Survey Form - fcc challenge</title>
+</head>
+
+<body>
+    <div id="bg-image"></div>
+    <main>
+        <h1 id="title">freeCodeCamp Survey Form</h1> <!-- user story 1 -->
+        <p id="description">Thank you for taking the time help us improve the platform</p> <!-- user story 2 -->
+        <form action="submit" method="POST" id="survey-form">
+            <!-- user story 3 -->
+            <div>
+                <label for="name" id="name-label">Name</label> <!-- user story 10 -->
+                <input type="text" required placeholder="Enter your name" id="name" /> <!-- user story 4, 11 -->
+            </div>
+
+            <div>
+                <label for="email" id="email-label">Email</label> <!-- user story 10 -->
+                <input type="email" required placeholder="Enter your email" id="email" />
+                <!-- user story 5, 6, 11 -->
+            </div>
+
+            <div>
+                <label for="number" id="number-label">Age <span>(optional)</span></label> <!-- user story 10 -->
+                <input type="number" placeholder="156" min="10" max="10000" id="number" />
+                <!-- user story 7, 8, 9, 11 -->
+            </div>
+
+            <div>
+                <p id="dropdown-label">Which option best describes your current role ?</p>
+                <select name="dropdown" id="dropdown">
+                    <!-- user story 12 -->
+                    <option value="default" disabled="true" selected>Select current role</option>
+                    <option value="full-time-learner">Full Time Learner</option>
+                    <option value="full-time-job">Full Time Job</option>
+                    <option value="student">Student</option>
+                    <option value="prefer-not-to-say">Prefer not to say</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div>
+                <p>Would you recommend freeCodeCamp to a friend ?</p>
+                <!-- user story 13 -->
+                <label>
+                    <input checked type="radio" value="sure" name="recommendation" id="sure-radio" />
+                    Definitely
+                </label>
+                <label>
+                    <input type="radio" value="maybe" name="recommendation" id="maybe-radio" />
+                    Maybe
+                </label>
+                <label>
+                    <input type="radio" value="not-sure" name="recommendation" id="not-sure-radio" />
+                    Not sure
+                </label>
+            </div>
+
+            <div>
+                <label for="dropdown2" id="dropdown2-label">What is your favorite feature of freeCodeCamp ?</label>
+                <select name="dropdown2" id="dropdown2">
+                    <!-- user story 12 -->
+                    <option value="default" disabled="true" selected>Select an option</option>
+                    <option value="challenges">Challenges</option>
+                    <option value="open-source">Open Source</option>
+                    <option value="community">Community</option>
+                    <option value="projects">Project</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+
+            <div id="checkboxes">
+                <!-- user story 14 -->
+                <p>What would you like to see improved ? <span>(check all that apply)</span></p>
+            </div>
+
+            <div>
+                <label for="comments">Any comments or suggestions?</label>
+                <textarea placeholder="Enter your comment here" rows="4"></textarea> <!-- user story 15 -->
+            </div>
+
+            <input type="submit" id="submit" value="Submit" /> <!-- user story 16 -->
+        </form>
+    </main>
+
+    <script src="index.js"></script>
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+</body>
+</html>
